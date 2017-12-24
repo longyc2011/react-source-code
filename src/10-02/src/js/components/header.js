@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router';
+import {Link} from 'react-router-dom';
 export default class ComponentHeader extends React.Component {
 constructor(){
 	super();
@@ -30,7 +30,7 @@ switchHeader(){
 				<ul>
 					<li><Link to={`/`}>首页</Link></li>
 					<li><Link to={`/details`}>嵌套的详情页面</Link></li>
-					<li><Link to={`/list/1234`}>列表页面</Link></li>
+					<li><Link to="/list/1234">列表页面</Link></li>
 				</ul>
 			</header>
 		)
