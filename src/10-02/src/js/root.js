@@ -4,11 +4,18 @@ import 'antd/dist/antd.css';
 import {Button} from 'antd';
 import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 import PCIndex from './components/pc_index'
+import MobileIndex from './components/mobile_index';
+import MediaQuery from 'react-responsive';
 export default class Root extends React.Component {
   render() {
     return (
 			<div>
-				<PCIndex/>
+				<MediaQuery query='(min-device-width: 1224px)'>
+					<PCIndex/>
+				</MediaQuery>
+				<MediaQuery query='(max-device-width: 1224px)'>
+					<MobileIndex/>
+				</MediaQuery>
 			</div>
     );
   };
