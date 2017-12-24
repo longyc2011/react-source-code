@@ -4,7 +4,7 @@ import BodyChild from './bodychild';
 
 import ReactMixin from 'react-mixin';
 import MixinLog from './mixins';
-
+import PropTypes from 'prop-types';
 import { Input } from 'antd';
 
 const defaultProps = {
@@ -55,7 +55,7 @@ export default class BodyIndex extends React.Component {
 	}
 }
 BodyIndex.propTypes = {
-	userid: React.PropTypes.number.isRequired
+	userid: PropTypes.number.isRequired
 };
 BodyIndex.defaultProps = defaultProps;
 
